@@ -59,15 +59,13 @@ git clone https://github.com/hugsy/gef.git ~/.gdb_plugins/gef
 
 
 echo "[+] Setting .gdbinit..."
-cd ~/.gdb_peda_pwndbg_gef
-cp gdbinit ~/.gdbinit
+cp ~/.gdb_peda_pwndbg_gef/gdbinit ~/.gdbinit
 
 {
 	echo "[+] Creating files..."
-	cd ~/.gdb_peda_pwndbg_gef
-	sudo cp gdb-peda /usr/bin/gdb-peda &&\
-		sudo cp gdb-pwndbg /usr/bin/gdb-pwndbg &&\
-		sudo cp gdb-gef /usr/bin/gdb-gef
+	sudo cp ~/.gdb_peda_pwndbg_gef/gdb-peda /usr/bin/gdb-peda &&\
+		sudo cp ~/.gdb_peda_pwndbg_gef/gdb-pwndbg /usr/bin/gdb-pwndbg &&\
+		sudo cp ~/.gdb_peda_pwndbg_gef/gdb-gef /usr/bin/gdb-gef
 	} || {
 		echo "[-] Permission denied"
 			exit
