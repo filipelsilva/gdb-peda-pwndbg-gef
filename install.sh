@@ -26,7 +26,7 @@ if [ -d ~/peda ] || [ -h ~/.peda ]; then
     fi
 else
     echo "[+] Downloading PEDA..."
-    git clone https://github.com/longld/peda.git ~/gdb_plugins/peda
+    git clone https://github.com/longld/peda.git ~/.gdb_plugins/peda
 fi
 
 
