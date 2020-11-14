@@ -20,13 +20,13 @@ if [ -d ~/peda ] || [ -h ~/.peda ]; then
 
     if [ $skip_peda = 'n' ]; then
         rm -rf ~/peda
-        git clone https://github.com/longld/peda.git ~/peda
+        git clone https://github.com/longld/peda.git ~/.gdb_plugins/peda
     else
         echo "PEDA skipped"
     fi
 else
     echo "[+] Downloading PEDA..."
-    git clone https://github.com/longld/peda.git ~/peda
+    git clone https://github.com/longld/peda.git ~/gdb_plugins/peda
 fi
 
 
@@ -37,25 +37,25 @@ if [ -d ~/pwndbg ] || [ -h ~/.pwndbg ]; then
 
     if [ $skip_pwndbg = 'n' ]; then
         rm -rf ~/pwndbg
-        git clone https://github.com/pwndbg/pwndbg.git ~/pwndbg
+        git clone https://github.com/pwndbg/pwndbg.git ~/.gdb_plugins/pwndbg
 
-        cd ~/pwndbg
+        cd ~/.gdb_plugins/pwndbg
         ./setup.sh
     else
         echo "Pwndbg skipped"
     fi
 else
     echo "[+] Downloading Pwndbg..."
-    git clone https://github.com/pwndbg/pwndbg.git ~/pwndbg
+    git clone https://github.com/pwndbg/pwndbg.git ~/.gdb_plugins/pwndbg
 
-    cd ~/pwndbg
+    cd ~/.gdb_plugins/pwndbg
     ./setup.sh
 fi
 
 
 # download gef
 echo "[+] Downloading GEF..."
-git clone https://github.com/hugsy/gef.git ~/gef
+git clone https://github.com/hugsy/gef.git ~/.gdb_plugins/gef
 
 
 echo "[+] Setting .gdbinit..."
